@@ -1,12 +1,16 @@
 import uuid
+from enum import Enum
 
 from sqlalchemy import Boolean, ForeignKey, Integer, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from sqlalchemy.orm import foreign
-
 from app.models.base import Base, TimestampMixin, generate_uuid
+
+
+class UserRole(str, Enum):
+    OWNER = "owner"
+    STAFF = "staff"
 
 
 class User(Base, TimestampMixin):

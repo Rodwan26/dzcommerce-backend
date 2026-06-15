@@ -1,6 +1,6 @@
 from app.models.base import Base
 from app.models.tenant import Tenant
-from app.models.user import User
+from app.models.user import User, UserRole
 from app.models.tenant_request import TenantRequest
 from app.models.tenant_settings import TenantSettings
 from app.models.tenant_feature import TenantFeature

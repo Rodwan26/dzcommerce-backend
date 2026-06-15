@@ -42,5 +42,7 @@ class Settings(BaseSettings):
     FACEBOOK_SYNC_INTERVAL_SECONDS: int = 1800
     FACEBOOK_MOCK_MODE: bool = False
 
+    MAX_TEAM_MEMBERS: int = 3
+
 
 settings = Settings()

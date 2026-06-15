@@ -38,3 +38,7 @@ opencode_backup.json
 
 # Root level (frontend has its own)
 package-lock.json
+docker-compose.yml
+docker-compose.override.yml
+docs/
+frontend/

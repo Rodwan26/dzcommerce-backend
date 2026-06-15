@@ -6,7 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api import auth, admin, dashboard, products, orders, payments, tenant, shipping, facebook, integrations
+from app.api import auth, admin, dashboard, products, orders, payments, tenant, shipping, facebook, integrations, team
 from app.core.config import settings
 from app.core.db import async_session_factory
 from app.middleware.tenant import resolve_tenant
@@ -85,6 +85,7 @@ app.include_router(dashboard.router)
 app.include_router(shipping.router)
 app.include_router(facebook.router)
 app.include_router(integrations.router)
+app.include_router(team.router)
 
 
 @app.get("/health")
